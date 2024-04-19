@@ -36,7 +36,7 @@ func main() {
 
     // add middleware stack
     r.Use(httpd.LoggerMiddleware)
-	r.Use(httpd.RecoverMiddleware)
+    r.Use(httpd.RecoverMiddleware)
 
     // add routes
     r.Get("/", indexRoute)
@@ -47,7 +47,7 @@ func main() {
 
     if err != nil {
         slog.Error("httpd server error", "err", err)
-		os.Exit(1)
+        os.Exit(1)
     }
 }
 
